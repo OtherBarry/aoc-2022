@@ -1,5 +1,6 @@
 import argparse
 
+from four import Problem4
 from one import Problem1
 from three import Problem3
 from two import Problem2
@@ -8,28 +9,28 @@ PROBLEM_MAP = {
     1: Problem1,
     2: Problem2,
     3: Problem3,
-    # 4: ProblemFour,
-    # 5: ProblemFive,
-    # 6: ProblemSix,
-    # 7: ProblemSeven,
-    # 8: ProblemEight,
-    # 9: ProblemNine,
-    # 10: ProblemTen,
-    # 11: ProblemEleven,
-    # 12: ProblemTwelve,
-    # 13: ProblemThirteen,
-    # 14: ProblemFourteen,
-    # 15: ProblemFifteen,
-    # 16: ProblemSixteen,
-    # 17: ProblemSeventeen,
-    # 18: ProblemEighteen,
-    # 19: ProblemNineteen,
-    # 20: ProblemTwenty,
-    # 21: ProblemTwentyOne,
-    # 22: ProblemTwentyTwo,
-    # 23: ProblemTwentyThree,
-    # 24: ProblemTwentyFour,
-    # 25: ProblemTwentyFive,
+    4: Problem4,
+    # 5: Problem5,
+    # 6: Problem6,
+    # 7: Problem7,
+    # 8: Problem8,
+    # 9: Problem9,
+    # 10: Problem10,
+    # 11: Problem11,
+    # 12: Problem12,
+    # 13: Problem13,
+    # 14: Problem14,
+    # 15: Problem15,
+    # 16: Problem16,
+    # 17: Problem17,
+    # 18: Problem18,
+    # 19: Problem19,
+    # 20: Problem20,
+    # 21: Problem21,
+    # 22: Problem22,
+    # 23: Problem23,
+    # 24: Problem24,
+    # 25: Problem25,
 }
 
 if __name__ == "__main__":
