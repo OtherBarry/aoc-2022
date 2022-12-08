@@ -1,7 +1,7 @@
-from base import BaseProblem
+from base import Problem
 
 
-class ProblemOne(BaseProblem):
+class Problem1(Problem):
     def setup(self) -> None:
         input_ = self.raw_input.splitlines()
         elves = []

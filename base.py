@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Any
 
 
-class BaseProblem(ABC):
+class Problem(ABC):
     def __init__(self, input_path: str):
         with open(input_path) as f:
             self.raw_input = f.read()

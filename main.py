@@ -1,13 +1,13 @@
 import argparse
 
-from one import ProblemOne
-from three import ProblemThree
-from two import ProblemTwo
+from one import Problem1
+from three import Problem3
+from two import Problem2
 
 PROBLEM_MAP = {
-    1: ProblemOne,
-    2: ProblemTwo,
-    3: ProblemThree,
+    1: Problem1,
+    2: Problem2,
+    3: Problem3,
     # 4: ProblemFour,
     # 5: ProblemFive,
     # 6: ProblemSix,
