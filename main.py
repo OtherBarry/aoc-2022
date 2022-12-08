@@ -1,9 +1,9 @@
 import argparse
 
-from five import Problem5
+from timeit import default_timer as timer
+
 from four import Problem4
 from one import Problem1
-from six import Problem6
 from three import Problem3
 from two import Problem2
 
@@ -40,6 +40,8 @@ if __name__ == "__main__":
     parser.add_argument("problems", nargs="*", type=int, help="The problems to run")
     args = parser.parse_args()
     print("Running problems")
+
+    start = timer()
     if not args.problems:
         for day, problem_class in PROBLEM_MAP.items():
             print(f"\nProblem {day}:")
@@ -50,4 +52,5 @@ if __name__ == "__main__":
             print(f"\nProblem {day}:")
             problem = PROBLEM_MAP[day](f"inputs/{day}.txt")
             problem.run()
-    print("\nDone")
+    end = timer()
+    print(f"\nCompleted in {((end - start) * 1000):.2f}ms")
