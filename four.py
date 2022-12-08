@@ -27,4 +27,3 @@ class Problem4(Problem):
             if intersection:
                 result += 1
         return result
-

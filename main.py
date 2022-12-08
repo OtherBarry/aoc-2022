@@ -1,5 +1,6 @@
 import argparse
 
+from five import Problem5
 from four import Problem4
 from one import Problem1
 from three import Problem3
@@ -10,7 +11,7 @@ PROBLEM_MAP = {
     2: Problem2,
     3: Problem3,
     4: Problem4,
-    # 5: Problem5,
+    5: Problem5,
     # 6: Problem6,
     # 7: Problem7,
     # 8: Problem8,
