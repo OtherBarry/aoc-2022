@@ -1,5 +1,7 @@
 from typing import Any
 
+from base import BaseProblem
+
 PRIORITY_MAP = {
     "a": 1,
     "b": 2,
@@ -60,26 +62,24 @@ def chunk_list(list_: list[Any], chunk_size: int) -> list[list[Any]]:
     return [list_[i : i + chunk_size] for i in range(0, len(list_), chunk_size)]
 
 
-def part_1(items: list[list[int]]) -> int:
-    result = 0
-    for pack in items:
-        midpoint = len(pack) // 2
-        intersection = set(pack[:midpoint]) & set(pack[midpoint:])
-        result += intersection.pop()
-    return result
+class ProblemThree(BaseProblem):
+    def setup(self) -> None:
+        self.packs = [
+            [PRIORITY_MAP[c] for c in line] for line in self.raw_input.splitlines()
+        ]
 
+    def part_1(self) -> int:
+        result = 0
+        for pack in self.packs:
+            midpoint = len(pack) // 2
+            intersection = set(pack[:midpoint]) & set(pack[midpoint:])
+            result += intersection.pop()
+        return result
 
-def part_2(items: list[list[int]]) -> int:
-    result = 0
-    for chunk in chunk_list(items, 3):
-        a, b, c = chunk
-        intersection = set(a) & set(b) & set(c)
-        result += intersection.pop()
-    return result
-
-
-with open("day-3/input.txt") as f:
-    input = f.read().splitlines()
-    packs = [[PRIORITY_MAP[c] for c in line] for line in input]
-    print(f"Part 1: {part_1(packs)}")
-    print(f"Part 2: {part_2(packs)}")
+    def part_2(self) -> int:
+        result = 0
+        for chunk in chunk_list(self.packs, 3):
+            a, b, c = chunk
+            intersection = set(a) & set(b) & set(c)
+            result += intersection.pop()
+        return result

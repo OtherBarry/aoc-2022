@@ -1,3 +1,5 @@
+from base import BaseProblem
+
 PART_1_MOVE_MAP = {
     "A X": "A A",
     "A Y": "A B",
@@ -35,7 +37,12 @@ SCORE_MAP = {
 }
 
 
-with open("day-2/input.txt") as f:
-    input = f.read().splitlines()
-    print(f"Part 1: {sum(SCORE_MAP[PART_1_MOVE_MAP[move]] for move in input)}")
-    print(f"Part 2: {sum(SCORE_MAP[PART_2_MOVE_MAP[move]] for move in input)}")
+class ProblemTwo(BaseProblem):
+    def setup(self) -> None:
+        self.input = self.raw_input.splitlines()
+
+    def part_1(self) -> int:
+        return sum(SCORE_MAP[PART_1_MOVE_MAP[move]] for move in self.input)
+
+    def part_2(self) -> int:
+        return sum(SCORE_MAP[PART_2_MOVE_MAP[move]] for move in self.input)
