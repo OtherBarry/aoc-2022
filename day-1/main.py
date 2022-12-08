@@ -20,7 +20,5 @@ with open("day-1/input.txt") as f:
         else:
             elf.inventory.append(int(line))
     elves.sort(key=lambda elf: elf.total_calories(), reverse=True)
-    print(f"Most calories held by single elf: {elves[0].total_calories()}")
-    print(
-        f"Calories held by top 3 elves: {sum(elf.total_calories() for elf in elves[:3])}"
-    )
+    print(f"Part 1: {elves[0].total_calories()}")
+    print(f"Part 2: {sum(elf.total_calories() for elf in elves[:3])}")

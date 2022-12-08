@@ -38,4 +38,4 @@ SCORE_MAP = {
 with open("day-2/input.txt") as f:
     input = f.read().splitlines()
     print(f"Part 1: {sum(SCORE_MAP[PART_1_MOVE_MAP[move]] for move in input)}")
-    print(f"Part 1: {sum(SCORE_MAP[PART_2_MOVE_MAP[move]] for move in input)}")
+    print(f"Part 2: {sum(SCORE_MAP[PART_2_MOVE_MAP[move]] for move in input)}")
