@@ -2,6 +2,8 @@ from base import Problem
 
 
 class Problem4(Problem):
+    # TODO: Use maths + start/end values instead of range sets
+
     def setup(self) -> None:
         pairs = []
         for line in self.raw_input.splitlines():

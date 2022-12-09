@@ -3,17 +3,15 @@ from base import Problem
 
 class Problem1(Problem):
     def setup(self) -> None:
-        input_ = self.raw_input.splitlines()
-        elves = []
+        self.elves = []
         elf = 0
-        for line in input_:
+        for line in self.raw_input.splitlines():
             if line == "":
-                elves.append(elf)
+                self.elves.append(elf)
                 elf = 0
             else:
                 elf += int(line)
-        elves.sort(reverse=True)
-        self.elves = elves
+        self.elves.sort(reverse=True)
 
     def part_1(self) -> int:
         return self.elves[0]
