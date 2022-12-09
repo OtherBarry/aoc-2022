@@ -1,5 +1,4 @@
 import argparse
-
 from timeit import default_timer as timer
 
 from five import Problem5

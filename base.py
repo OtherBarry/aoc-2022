@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from typing import Any
 from timeit import default_timer as timer
+from typing import Any
 
 
 class Problem(ABC):
