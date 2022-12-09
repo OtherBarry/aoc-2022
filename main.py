@@ -2,8 +2,10 @@ import argparse
 
 from timeit import default_timer as timer
 
+from five import Problem5
 from four import Problem4
 from one import Problem1
+from six import Problem6
 from three import Problem3
 from two import Problem2
 
