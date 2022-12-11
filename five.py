@@ -40,19 +40,22 @@ class Supplies:
 
 class Problem5(Problem):
     def setup(self) -> None:
-        # TODO: Don't hardcode the height and number of stacks
         lines = self.raw_input.splitlines()
-        stack_lines = lines[:8]
-        stacks = [Stack() for _ in range(9)]
-        stack_lines = stack_lines[::-1]  # reverse so  stacks are in correct order
-        for line in stack_lines:
-            chunks = chunk_string(line, 4)
-            for i, chunk in enumerate(chunks):
+        num_stacks = (len(lines[0]) + 1) // 4
+        stacks = [Stack() for _ in range(num_stacks)]
+        moves_start = -1
+        for i, line in enumerate(lines):
+            if "[" not in line:
+                stacks_end = i
+                moves_start = i + 2
+                break
+        for line in lines[:stacks_end][::-1]:
+            for j, chunk in enumerate(chunk_string(line, 4)):
                 if chunk != "    ":
-                    stacks[i].push(chunk[1])
+                    stacks[j].push(chunk[1])
         self.supplies = Supplies(stacks)
         self.moves = []
-        for line in lines[10:]:
+        for line in lines[moves_start:]:
             _, count, _, source, _, target = line.split()
             self.moves.append((int(source) - 1, int(target) - 1, int(count)))
 
