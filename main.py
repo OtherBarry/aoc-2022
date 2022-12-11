@@ -7,6 +7,7 @@ from four import Problem4
 from one import Problem1
 from seven import Problem7
 from six import Problem6
+from ten import Problem10
 from three import Problem3
 from two import Problem2
 
@@ -20,7 +21,7 @@ PROBLEM_MAP = {
     7: Problem7,
     8: Problem8,
     # 9: Problem9,
-    # 10: Problem10,
+    10: Problem10,
     # 11: Problem11,
     # 12: Problem12,
     # 13: Problem13,
