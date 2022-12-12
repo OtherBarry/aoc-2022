@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from math import lcm
 from queue import Queue
 
-from base import Problem
+from .base import Solution
 
 
 @dataclass
@@ -85,7 +85,7 @@ def generate_monkeys(string: str) -> dict[int, Monkey]:
     return monkeys
 
 
-class Problem11(Problem):
+class Solution11(Solution):
     def setup(self) -> None:
         pass
 

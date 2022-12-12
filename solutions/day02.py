@@ -1,4 +1,4 @@
-from base import Problem
+from .base import Solution
 
 PART_1_MOVE_MAP = {
     "A X": "A A",
@@ -37,7 +37,7 @@ SCORE_MAP = {
 }
 
 
-class Problem2(Problem):
+class Solution02(Solution):
     def setup(self) -> None:
         self.input = self.raw_input.splitlines()
 

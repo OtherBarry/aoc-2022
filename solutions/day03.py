@@ -1,6 +1,6 @@
 from typing import Any
 
-from base import Problem
+from .base import Solution
 
 PRIORITY_MAP = {
     "a": 1,
@@ -62,7 +62,7 @@ def chunk_list(list_: list[Any], chunk_size: int) -> list[list[Any]]:
     return [list_[i : i + chunk_size] for i in range(0, len(list_), chunk_size)]
 
 
-class Problem3(Problem):
+class Solution03(Solution):
     def setup(self) -> None:
         self.packs = [
             [PRIORITY_MAP[c] for c in line] for line in self.raw_input.splitlines()

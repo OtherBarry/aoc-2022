@@ -1,4 +1,4 @@
-from base import Problem
+from .base import Solution
 
 
 class MaxLengthStack:
@@ -18,7 +18,7 @@ class MaxLengthStack:
         )
 
 
-class Problem6(Problem):
+class Solution06(Solution):
     def setup(self) -> None:
         pass
 

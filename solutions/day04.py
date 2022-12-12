@@ -1,7 +1,7 @@
-from base import Problem
+from .base import Solution
 
 
-class Problem4(Problem):
+class Solution04(Solution):
     # TODO: Use maths + start/end values instead of range sets
 
     def setup(self) -> None:

@@ -1,7 +1,7 @@
-from base import Problem
+from .base import Solution
 
 
-class Problem1(Problem):
+class Solution01(Solution):
     def setup(self) -> None:
         self.elves = []
         elf = 0

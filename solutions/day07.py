@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-from base import Problem
+from .base import Solution
 
 
 @dataclass
@@ -36,7 +36,7 @@ def find_all_children_matching(node: Node, predicate: callable) -> list[Node]:
     return matches
 
 
-class Problem7(Problem):
+class Solution07(Solution):
     def setup(self) -> None:
         root = Node(name="/", is_directory=True)
         current_dir = root

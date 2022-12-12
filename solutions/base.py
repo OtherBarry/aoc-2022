@@ -3,7 +3,14 @@ from timeit import default_timer as timer
 from typing import Any
 
 
-class Problem(ABC):
+def format_time(time: float) -> str:
+    if time < 1:
+        return f"{time * 1000:.2f} ms"
+    else:
+        return f"{time:.2f}  s"
+
+
+class Solution(ABC):
     def __init__(self, input_path: str):
         with open(input_path) as f:
             self.raw_input = f.read()
@@ -12,14 +19,8 @@ class Problem(ABC):
         start = timer()
         result = func()
         end = timer()
-        return self._format_time(end - start), result
+        return format_time(end - start), result
 
-    @staticmethod
-    def _format_time(time: float) -> str:
-        if time < 1:
-            return f"{time * 1000:.2f} ms"
-        else:
-            return f"{time:.2f}  s"
 
     def setup(self) -> None:
         pass

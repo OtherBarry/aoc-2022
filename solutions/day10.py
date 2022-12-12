@@ -1,7 +1,7 @@
-from base import Problem
+from .base import Solution
 
 
-class Problem10(Problem):
+class Solution10(Solution):
     def setup(self) -> None:
         self.x_register = [1]
         for line in self.raw_input.splitlines():

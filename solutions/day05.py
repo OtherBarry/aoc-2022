@@ -1,7 +1,7 @@
 from copy import deepcopy
 from dataclasses import dataclass, field
 
-from base import Problem
+from .base import Solution
 
 
 def chunk_string(string: str, chunk_size: int) -> list[str]:
@@ -38,7 +38,7 @@ class Supplies:
             self.stacks[target].push(temp_stack.pop())
 
 
-class Problem5(Problem):
+class Solution05(Solution):
     def setup(self) -> None:
         lines = self.raw_input.splitlines()
         num_stacks = (len(lines[0]) + 1) // 4

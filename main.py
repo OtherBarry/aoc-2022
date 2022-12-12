@@ -1,29 +1,30 @@
 import argparse
 from timeit import default_timer as timer
 
-from eight import Problem8
-from eleven import Problem11
-from five import Problem5
-from four import Problem4
-from one import Problem1
-from seven import Problem7
-from six import Problem6
-from ten import Problem10
-from three import Problem3
-from two import Problem2
+from solutions.base import format_time
+from solutions.day08 import Solution08
+from solutions.day11 import Solution11
+from solutions.day05 import Solution05
+from solutions.day04 import Solution04
+from solutions.day01 import Solution01
+from solutions.day07 import Solution07
+from solutions.day06 import Solution06
+from solutions.day10 import Solution10
+from solutions.day03 import Solution03
+from solutions.day02 import Solution02
 
 PROBLEM_MAP = {
-    1: Problem1,
-    2: Problem2,
-    3: Problem3,
-    4: Problem4,
-    5: Problem5,
-    6: Problem6,
-    7: Problem7,
-    8: Problem8,
+    1: Solution01,
+    2: Solution02,
+    3: Solution03,
+    4: Solution04,
+    5: Solution05,
+    6: Solution06,
+    7: Solution07,
+    8: Solution08,
     # 9: Problem9,
-    10: Problem10,
-    11: Problem11,
+    10: Solution10,
+    11: Solution11,
     # 12: Problem12,
     # 13: Problem13,
     # 14: Problem14,
@@ -58,4 +59,4 @@ if __name__ == "__main__":
             problem = PROBLEM_MAP[day](f"inputs/{day}.txt")
             problem.run()
     end = timer()
-    print(f"\nCompleted in {((end - start) * 1000):.2f}ms")
+    print(f"\nCompleted in {format_time(end - start)}")

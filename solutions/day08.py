@@ -1,6 +1,6 @@
 import numpy as np
 
-from base import Problem
+from .base import Solution
 
 
 def test_array_visibility(array: np.ndarray, mask: np.ndarray) -> None:
@@ -35,7 +35,7 @@ def determine_visibility(array: np.ndarray, coordinates: tuple[int, int]) -> int
     return np.product(results)
 
 
-class Problem8(Problem):
+class Solution08(Solution):
     def setup(self) -> None:
         grid = []
         for line in self.raw_input.splitlines():
