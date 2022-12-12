@@ -2,16 +2,16 @@ import argparse
 from timeit import default_timer as timer
 
 from solutions.base import format_time
-from solutions.day08 import Solution08
-from solutions.day11 import Solution11
-from solutions.day05 import Solution05
-from solutions.day04 import Solution04
 from solutions.day01 import Solution01
-from solutions.day07 import Solution07
-from solutions.day06 import Solution06
-from solutions.day10 import Solution10
-from solutions.day03 import Solution03
 from solutions.day02 import Solution02
+from solutions.day03 import Solution03
+from solutions.day04 import Solution04
+from solutions.day05 import Solution05
+from solutions.day06 import Solution06
+from solutions.day07 import Solution07
+from solutions.day08 import Solution08
+from solutions.day10 import Solution10
+from solutions.day11 import Solution11
 
 PROBLEM_MAP = {
     1: Solution01,

@@ -21,7 +21,6 @@ class Solution(ABC):
         end = timer()
         return format_time(end - start), result
 
-
     def setup(self) -> None:
         pass
 
