@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from math import lcm
-from queue import Queue
+from queue import SimpleQueue
 
 from .base import Solution
 
@@ -11,7 +11,7 @@ class Monkey:
     divide: int
     true_target: int
     false_target: int
-    items: Queue[int] = field(default_factory=Queue)
+    items: SimpleQueue[int] = field(default_factory=SimpleQueue)
     multipy: int = 1
     add: int = 0
     factor: int = 1
