@@ -2,6 +2,7 @@ import argparse
 from timeit import default_timer as timer
 
 from eight import Problem8
+from eleven import Problem11
 from five import Problem5
 from four import Problem4
 from one import Problem1
@@ -22,7 +23,7 @@ PROBLEM_MAP = {
     8: Problem8,
     # 9: Problem9,
     10: Problem10,
-    # 11: Problem11,
+    11: Problem11,
     # 12: Problem12,
     # 13: Problem13,
     # 14: Problem14,
