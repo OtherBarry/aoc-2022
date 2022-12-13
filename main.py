@@ -12,6 +12,7 @@ from solutions.day07 import Solution07
 from solutions.day08 import Solution08
 from solutions.day10 import Solution10
 from solutions.day11 import Solution11
+from solutions.day12 import Solution12
 
 PROBLEM_MAP = {
     1: Solution01,
@@ -22,23 +23,23 @@ PROBLEM_MAP = {
     6: Solution06,
     7: Solution07,
     8: Solution08,
-    # 9: Problem9,
+    # 9: Solution9,
     10: Solution10,
     11: Solution11,
-    # 12: Problem12,
-    # 13: Problem13,
-    # 14: Problem14,
-    # 15: Problem15,
-    # 16: Problem16,
-    # 17: Problem17,
-    # 18: Problem18,
-    # 19: Problem19,
-    # 20: Problem20,
-    # 21: Problem21,
-    # 22: Problem22,
-    # 23: Problem23,
-    # 24: Problem24,
-    # 25: Problem25,
+    12: Solution12,
+    # 13: Solution13,
+    # 14: Solution14,
+    # 15: Solution15,
+    # 16: Solution16,
+    # 17: Solution17,
+    # 18: Solution18,
+    # 19: Solution19,
+    # 20: Solution20,
+    # 21: Solution21,
+    # 22: Solution22,
+    # 23: Solution23,
+    # 24: Solution24,
+    # 25: Solution25,
 }
 
 if __name__ == "__main__":
