@@ -1,3 +1,5 @@
+import json
+
 from .base import Solution
 
 
@@ -48,7 +50,7 @@ class Solution13(Solution):
         pairs = []
         for pair in self.raw_input.split("\n\n"):
             first, second = pair.splitlines()
-            pairs.append((eval(first), eval(second)))
+            pairs.append((json.loads(first), json.loads(second)))
         self.pairs = pairs
 
     def part_1(self) -> int:
