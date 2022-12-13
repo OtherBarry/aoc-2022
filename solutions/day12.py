@@ -43,12 +43,11 @@ class Solution12(Solution):
         a_nodes = [
             node for node in self.graph.nodes if self.graph.nodes[node]["char"] == "a"
         ]
+        all_paths = nx.shortest_path_length(self.graph, target=self.end)
         path_lengths = []
         for a_node in a_nodes:
             try:
-                path_lengths.append(
-                    nx.shortest_path_length(self.graph, a_node, self.end)
-                )
-            except nx.NetworkXNoPath:
+                path_lengths.append(all_paths[a_node])
+            except KeyError:
                 pass
         return min(path_lengths)
