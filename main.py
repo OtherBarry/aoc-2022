@@ -14,6 +14,7 @@ from solutions.day10 import Solution10
 from solutions.day11 import Solution11
 from solutions.day12 import Solution12
 from solutions.day13 import Solution13
+from solutions.day14 import Solution14
 
 PROBLEM_MAP = {
     1: Solution01,
@@ -29,7 +30,7 @@ PROBLEM_MAP = {
     11: Solution11,
     12: Solution12,
     13: Solution13,
-    # 14: Solution14,
+    14: Solution14,
     # 15: Solution15,
     # 16: Solution16,
     # 17: Solution17,
